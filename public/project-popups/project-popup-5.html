@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="heading">
+        <h2>Blog Website</h2>
+    </div>
+    <div class="content-container">
+        <!-- Carousel and dots -->
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="project-image">
+                    <img src="img/blog.png" alt="Project Image" height="450px">
+                </div>
+                <div class="dots">
+                    <span class="dot" data-img="img/blog.png"></span>
+                    <span class="dot" data-img="img/blog1.png"></span>
+                    <span class="dot" data-img="img/blog2.png"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project info -->
+        <div class="project-info">
+            <!-- Add your project info here -->
+            <h3>Project Info:</h3>
+            <p>This blog website demonstrates my expertise in creating feature-rich and interactive web applications using both front-end and back-end technologies. Developed with Express, EJS, and MongoDB, the blog website offers a platform for users to read and compose blog posts effortlessly. The application leverages MongoDB Atlas for secure and reliable cloud-based data storage, ensuring that blog posts are safely stored and easily accessible. With a dedicated "/compose" route, users can conveniently create new blog posts and seamlessly integrate them into the website.</p>
+            
+            <h3>Key Features:</h3>
+            
+               <span><u>Blog Post Management:</u>Efficient organization and display of blog posts.</span><hr>
+                <span><u>Compose Feature:</u>Dedicated "/compose" route for easy creation and publishing of new blog posts.</span><hr>
+                <span><u>MongoDB Atlas Integration:</u>Secure and reliable cloud-based data storage for blog content.</span><hr>
+                <span><u>Intuitive User Interface:</u>Clean design and user-friendly experience developed using EJS, Express, and front-end technologies.</span><hr>
+                <span><u>URL:</u> <a href="http://www.example.com">www.example.com</a>
+            </span><hr>
+            <span><u>GitHub:</u> <a href="http://www.example.com">www.example.com</a>
+            </span><hr>
+
+            
+        </div>
+    </div>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const dots = document.querySelectorAll('.dot');
+          const projectImage = document.querySelector('.project-image img');
+        
+          dots.forEach((dot) => {
+            dot.addEventListener('click', function () {
+              // Update the image source
+              projectImage.src = dot.dataset.img;
+        
+              // Update the active dot
+              dots.forEach((otherDot) => {
+                otherDot.classList.remove('active');
+              });
+              dot.classList.add('active');
+            });
+          });
+        
+          // Set the first dot as active initially
+          dots[0].classList.add('active');
+        });
+        </script>
+</body>
+</html>
+

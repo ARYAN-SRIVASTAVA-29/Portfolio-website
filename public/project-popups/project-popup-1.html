@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="heading">
+        <h2>E-Commerce WebApplication</h2>
+    </div>
+    <div class="content-container">
+        <!-- Carousel and dots -->
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="project-image">
+                    <img src="img/ecommerce.png" alt="Project Image">
+                </div>
+                <div class="dots">
+                    <span class="dot" data-img="img/ecommerce.png"></span>
+                    <span class="dot" data-img="img/ecommerce1.png"></span>
+                    <span class="dot" data-img="img/ecommerce2.png"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project info -->
+        <div class="project-info">
+            <!-- Add your project info here -->
+            <h3>Project Info:</h3>
+            <p>This e-commerce web application is a demonstration of my expertise in full-stack web development, with a focus on creating intuitive and functional online shopping experiences. Developed using Express, Node.js, HTML, CSS, and JavaScript, the application showcases my ability to integrate essential back-end and front-end technologies to deliver a seamless user experience.</p>
+            
+            <h3>Key Features:</h3>
+            
+               <span><u>Fully Functional Cart:</u> Fully functional cart with real-time item count badge updates.</span><hr>
+                <span><u>Package Utilization: </u> Effective utilization of firebase-functions, express, body-parser, ejs, and path packages.</span><hr>
+                <span><u>Smooth User Experience:</u>Smooth user experience optimized for performance and usability.</span><hr>
+                <span><u>Responsive Design: </u>Responsive design for various devices and screen sizes.</span><hr>
+                <span><u>URL:</u> <a href="http://www.example.com">www.example.com</a>
+            </span><hr>
+            <span><u>GitHub:</u> <a href="http://www.example.com">www.example.com</a>
+            </span><hr>
+
+            
+        </div>
+    </div>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const dots = document.querySelectorAll('.dot');
+          const projectImage = document.querySelector('.project-image img');
+        
+          dots.forEach((dot) => {
+            dot.addEventListener('click', function () {
+              // Update the image source
+              projectImage.src = dot.dataset.img;
+        
+              // Update the active dot
+              dots.forEach((otherDot) => {
+                otherDot.classList.remove('active');
+              });
+              dot.classList.add('active');
+            });
+          });
+        
+          // Set the first dot as active initially
+          dots[0].classList.add('active');
+        });
+        </script>
+</body>
+</html>
+

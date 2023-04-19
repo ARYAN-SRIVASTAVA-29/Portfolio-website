@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="heading">
+        <h2>Educational Website</h2>
+    </div>
+    <div class="content-container">
+        <!-- Carousel and dots -->
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="project-image">
+                    <img src="img/edu.png" alt="Project Image">
+                </div>
+                <div class="dots">
+                    <span class="dot" data-img="img/edu.png"></span>
+                    <span class="dot" data-img="img/edu1.png"></span>
+                    <span class="dot" data-img="img/edu2.png"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project info -->
+        <div class="project-info">
+            <!-- Add your project info here -->
+            <h3>Project Info:</h3>
+            <p>This multipage educational website is a testament to my proficiency in front-end web development, showcasing the ability to create engaging and informative web platforms using HTML, CSS, and JavaScript. The website serves as a valuable resource for learners, offering organized and accessible educational content across multiple pages. The user-friendly interface and clear navigation structure allow for a seamless browsing experience, enabling users to find the information they need quickly and efficiently.</p>
+            
+            <h3>Key Features:</h3>
+            
+               <span><u>Multipage Layout:</u>Organized presentation of educational content across various pages.</span><hr>
+                <span><u>Engaging Design:</u>Visually appealing and informative interface created using HTML, CSS, and JavaScript.</span><hr>
+                <span><u>User-friendly Navigation:</u>Clear and intuitive menu structure for seamless browsing.</span><hr>
+                <span><u>Responsive Design:</u>Optimized for various devices and screen sizes, ensuring a consistent user experience.</span><hr>
+                <span><u>URL:</u> <a href="http://www.example.com">www.example.com</a>
+            </span><hr>
+            <span><u>GitHub:</u> <a href="http://www.example.com">www.example.com</a>
+            </span><hr>
+
+            
+        </div>
+    </div>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const dots = document.querySelectorAll('.dot');
+          const projectImage = document.querySelector('.project-image img');
+        
+          dots.forEach((dot) => {
+            dot.addEventListener('click', function () {
+              // Update the image source
+              projectImage.src = dot.dataset.img;
+        
+              // Update the active dot
+              dots.forEach((otherDot) => {
+                otherDot.classList.remove('active');
+              });
+              dot.classList.add('active');
+            });
+          });
+        
+          // Set the first dot as active initially
+          dots[0].classList.add('active');
+        });
+        </script>
+</body>
+</html>
+

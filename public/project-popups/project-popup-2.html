@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="heading">
+        <h2>Weather Application</h2>
+    </div>
+    <div class="content-container">
+        <!-- Carousel and dots -->
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="project-image">
+                    <img src="img/weather.png" alt="Project Image">
+                </div>
+                <div class="dots">
+                    <span class="dot" data-img="img/weather.png"></span>
+                    <span class="dot" data-img="img/weather1.png"></span>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Project info -->
+        <div class="project-info">
+            <!-- Add your project info here -->
+            <h3>Project Info:</h3>
+            <p>This weather application is a testament to my proficiency in front-end web development, showcasing the ability to create interactive and dynamic web applications using HTML, CSS, and JavaScript. Leveraging the power of a weather API, the application allows users to access real-time weather data for any city around the world, displaying essential weather details like temperature, humidity, and wind conditions. The application also enhances the user experience by changing the background image according to the current time and weather conditions of the chosen city.</p>
+            
+            <h3>Key Features:</h3>
+            
+               <span><u>Global Weather Access:</u>Real-time weather data for any city around the world.</span><hr>
+                <span><u>Comprehensive Weather Details:</u> Displays temperature, humidity, wind conditions, and weather status (e.g., cloudy)</span><hr>
+                <span><u>Dynamic Background:</u>Background image changes based on the time and weather conditions of the selected city</span><hr>
+                <span><u>User-friendly Interface:</u>Clean and intuitive design, developed using HTML, CSS, and JavaScript.</span><hr>
+                <span><u>URL:</u> <a href="http://www.example.com">www.example.com</a>
+            </span><hr>
+            <span><u>GitHub:</u> <a href="http://www.example.com">www.example.com</a>
+            </span><hr>
+
+            
+        </div>
+    </div>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const dots = document.querySelectorAll('.dot');
+          const projectImage = document.querySelector('.project-image img');
+        
+          dots.forEach((dot) => {
+            dot.addEventListener('click', function () {
+              // Update the image source
+              projectImage.src = dot.dataset.img;
+        
+              // Update the active dot
+              dots.forEach((otherDot) => {
+                otherDot.classList.remove('active');
+              });
+              dot.classList.add('active');
+            });
+          });
+        
+          // Set the first dot as active initially
+          dots[0].classList.add('active');
+        });
+        </script>
+</body>
+</html>
+

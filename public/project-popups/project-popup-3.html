@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="heading">
+        <h2>MY PORTFOLIO</h2>
+    </div>
+    <div class="content-container">
+        <!-- Carousel and dots -->
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="project-image">
+                    <img src="img/port.png" alt="Project Image">
+                </div>
+                <div class="dots">
+                    <span class="dot" data-img="img/port.png"></span>
+                    <span class="dot" data-img="img/port1.png"></span>
+                    <span class="dot" data-img="img/port2.png"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project info -->
+        <div class="project-info">
+            <!-- Add your project info here -->
+            <h3>Project Info:</h3>
+            <p>This portfolio website is a visually engaging showcase of my skills and experience in web development and design. Developed using HTML, CSS, and JavaScript, the website highlights my proficiency in front-end technologies and commitment to delivering an exceptional user experience. Featuring a resume section and a work portfolio, the website is designed to provide a comprehensive understanding of my abilities and accomplishments.</p>
+            
+            <h3>Key Features:</h3>
+            
+               <span><u>Responsive Design:</u> Optimized for various devices and screen sizes.</span><hr>
+                <span><u>Resume Section:</u> Comprehensive overview of my projects.</span><hr>
+                <span><u>Work Portfolio:</u> Curated showcase of outstanding projects.</span><hr>
+                <span><u>Contact Form:</u> Seamless integration of server-side technologies like Express and Nodemailer for efficient communication.</span><hr>
+                <span><u>URL:</u> <a href="http://www.example.com">www.example.com</a>
+            </span><hr>
+            <span><u>GitHub:</u> <a href="http://www.example.com">www.example.com</a>
+            </span><hr>
+
+            
+        </div>
+    </div>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const dots = document.querySelectorAll('.dot');
+          const projectImage = document.querySelector('.project-image img');
+        
+          dots.forEach((dot) => {
+            dot.addEventListener('click', function () {
+              // Update the image source
+              projectImage.src = dot.dataset.img;
+        
+              // Update the active dot
+              dots.forEach((otherDot) => {
+                otherDot.classList.remove('active');
+              });
+              dot.classList.add('active');
+            });
+          });
+        
+          // Set the first dot as active initially
+          dots[0].classList.add('active');
+        });
+        </script>
+</body>
+</html>
+
